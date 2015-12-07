@@ -1,0 +1,22 @@
+package EE3piAlg
+
+use BesPolicy BesPolicy-*
+use GaudiInterface GaudiInterface-* External
+
+use DstEvent DstEvent-* Event
+use EventModel   EventModel-*  Event
+use EvtRecEvent EvtRecEvent-* Event
+use TrigEvent TrigEvent-* Event
+
+use VertexFit    VertexFit-*   Analysis
+use ParticleID   ParticleID-*  Analysis
+
+use McTruth      McTruth-*     Event
+use DTagTool     DTagTool-*    Analysis
+use BesROOT      BesROOT-00-*     External
+
+apply_pattern component_library
+library  EE3piAlg  *.cxx  components/*.cxx
+
+apply_pattern declare_runtime files=*.txt
+
